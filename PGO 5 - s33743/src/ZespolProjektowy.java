@@ -32,17 +32,19 @@ public class ZespolProjektowy {
     public Pracownik znajdzPoId(String idPracownika) {
         for (Pracownik pracownik : pracownicy) {
             if (pracownik.pobierzIdPracownika().equals(idPracownika)) {
+                return pracownik;
             }
         }
         return null;
     }
     public void wypiszProgramistow(){
         System.out.println("--------Programmers--------");
-        for(Pracownik pracownik : pracownicy){
-            if(pracownik instanceof Programista);
-            Programista programista = (Programista) pracownik;
+        for (Pracownik pracownik : pracownicy) {
+            if (pracownik instanceof Programista) {
+                Programista programista = (Programista) pracownik;
 
-            System.out.println(pracownik.przedstawSie());
+                System.out.println(pracownik.przedstawSie());
+            }
         }
     }
 }
