@@ -25,22 +25,24 @@ public class Pracownik {
     public double obliczKosztMiesieczny() { return stawkaBazowa; }
 
     public String przedstawSie() {
-        return "Nazywam sie: " + imie + nazwisko;
+        return "Nazywam sie: " + imie + " " + nazwisko;
     }
 
     @Override
     public String toString() {
-        return "Pracownik{" + idPracownika + '\'' +
-                ", imie='" + imie + '\'' +
-                ", nazwisko='" + nazwisko + '\'' +
-                ", stawkaBazowa='" + stawkaBazowa + '}';
+        return "Pracownik{" + idPracownika +
+                ", imie='" + imie + "'" +
+                ", nazwisko='" + nazwisko + "'" +
+                ", stawkaBazowa=" + stawkaBazowa + '}';
     }
 
     @Override
     public boolean equals(Object o) {
-        if (o == null) || getClass() != o.getClass()) return  false;
+        if (o == null || getClass() != o.getClass()) return  false;
+        Pracownik that = (Pracownik) o;
+        return this.idPracownika.equals(that.idPracownika);
     }
 
-
-
+    @Override
+    public int hashCode() {return Objects.hash(idPracownika);}
 }
