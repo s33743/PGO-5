@@ -53,4 +53,16 @@ public class Tester extends Pracownik {
                 " scenariuszy, " + zautomatyzowanyStr
         );
     }
+
+    @Override
+    public String toString() {
+        return "Tester{" +
+                "idPracownika=" + pobierzIdPracownika() +
+                ", imie=" + getImie() +
+                ", nazwisko=" + getNazwisko() +
+                ", stawkaBazowa=" + getStawkaBazowa() +
+                ", liczbaScenariuszy=" + getLiczbaScenariuszy() +
+                ", czyAutomatyzujacy=" + getCzyAutomatyzujacy() +
+                '}';
+    }
 }

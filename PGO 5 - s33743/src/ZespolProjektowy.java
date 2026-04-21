@@ -1,9 +1,14 @@
+import java.util.List;
 import java.util.ArrayList;
 
 public class ZespolProjektowy {
 
     private String nazwaProjektu;
     private ArrayList<Pracownik> pracownicy;
+
+    public List <Pracownik> getPracownicy() {
+        return pracownicy;
+    }
 
     public ZespolProjektowy(String nazwaProjektu) {
         this.nazwaProjektu = nazwaProjektu;
@@ -17,8 +22,9 @@ public class ZespolProjektowy {
     public void wypiszSkladZespolu() {
         System.out.println("-------Sklad zespolu------");
         for (Pracownik pracownik : pracownicy) {
-            System.out.println(pracownik.przedstawSie());
+            System.out.println(pracownik);
         }
+        System.out.println("---------------------");
     }
 
     public double policzLacznyKoszt() {

@@ -21,7 +21,18 @@ public class Main {
             programista.wypiszTechnologie();
         }
 
-        System.out.println(p2.equals(new Tester("E-201", "Inne", "Dane", 9000.0, false, 10)));
-        System.out.println(p2);
+        System.out.println("Porownuje " + p1 + " z " + p2);
+        if (p1.equals(p2)) {
+            System.out.println("    - takie same");
+        } else {
+            System.out.println("    - różne");
+        }
+
+        System.out.println("Porownuje " + p2 + " z " + p2);
+        if (p2.equals(p2)) {
+            System.out.println("    - takie same");
+        } else {
+            System.out.println("    - różne");
+        }
     }
 }
